@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Checklist</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+</head>
+<body>
+<header class="topbar">
+  <h1>Weekly Checklist</h1>
+  <a class="edit-link" href="editor.html" title="Edit Checklists">✏️</a>
+</header>
+
+<main class="app">
+
+  <!-- Mode selection -->
+  <section id="prompt" class="card animate-fade">
+    <p id="promptText">Choose whether you're Day or Night for today</p>
+    <div class="row">
+      <button id="dayBtn" class="btn btn-day">☀️ I'm Day</button>
+      <button id="nightBtn" class="btn btn-night">🌙 I'm Night</button>
+    </div>
+  </section>
+
+  <!-- Checklist -->
+  <section id="checklistSection" class="card animate-fade" style="display:none;">
+    <div class="header-row">
+      <div>
+        <h2 id="title"></h2>
+        <div id="subtext" class="subtext"></div>
+      </div>
+      <div class="actions">
+        <button id="changeMode" class="btn small">🔄 Change</button>
+      </div>
+    </div>
+
+    <ul id="list" class="list"></ul>
+    <div class="mobile-hint">Drag items to reorder. Tap checkbox to mark done.</div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
