@@ -1,21 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Edit — Weekly Checklist</title>
-<link rel="stylesheet" href="editor.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Editor — Checklist</title>
+  <link rel="stylesheet" href="editor.css">
 </head>
 <body>
-<header class="topbar"><h1>Edit Checklists</h1><a href="index.html">Back</a></header>
+<header class="topbar"><h1>Edit Checklists</h1><nav><a href="index.html" class="btn small muted">Back</a></nav></header>
+
 <main class="container">
-  <div class="controls card">
+  <section class="card controls">
     <label>Weekday:
       <select id="weekday"></select>
     </label>
     <label>Mode:
       <select id="modeSel"><option value="day">day</option><option value="night">night</option></select>
     </label>
-  </div>
+    <div class="row" style="margin-top:10px">
+      <button id="exportBtn" class="btn small">Export JSON</button>
+      <input id="importFile" type="file" accept=".json" />
+    </div>
+  </section>
 
   <section class="card">
     <h3 id="which"></h3>
@@ -23,11 +28,11 @@
 
     <div class="add-row">
       <input id="newText" placeholder="New item..." />
-      <button id="addBtn">Add</button>
+      <button id="addBtn" class="btn primary small">Add</button>
     </div>
   </section>
-  <div class="muted">Each weekday + mode has its own checklist. Changes save automatically.</div>
 </main>
+
 <script src="editor.js"></script>
 </body>
 </html>
